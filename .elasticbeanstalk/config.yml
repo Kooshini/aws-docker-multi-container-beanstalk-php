@@ -1,0 +1,22 @@
+branch-defaults:
+  default:
+    environment: docker-mc-alb
+environment-defaults:
+  docker-mc-alb:
+    branch: null
+    repository: null
+global:
+  application_name: multi
+  default_ec2_keyname: dev-test
+  default_platform: arn:aws:elasticbeanstalk:eu-west-1::platform/Multi-container Docker
+    running on 64bit Amazon Linux/2.13.0
+  default_region: eu-west-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: ems
+  sc: null
+  workspace_type: Application
+deploy: 
+  artifact: Dockerrun.aws.json

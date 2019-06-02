@@ -1,0 +1,33 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "app1",
+      "image": "001474167068.dkr.ecr.eu-west-1.amazonaws.com/app1:latest",
+      "essential": true,
+      "memory": 128,
+	  "portMappings": [
+         {
+          "hostPort": 8001,
+          "containerPort": 8001
+        }
+      ]
+    },
+    {
+      "name": "app2",
+      "image": "001474167068.dkr.ecr.eu-west-1.amazonaws.com/app2:latest",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+         {
+          "hostPort": 8002,
+          "containerPort": 8002
+        },
+		{
+          "hostPort": 8003,
+          "containerPort": 8002
+        }
+      ]
+    }
+  ]
+}
